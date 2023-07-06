@@ -20,8 +20,7 @@ function Items({ currentItems }) {
 }
 
 function PaginatedItems({ itemsPerPage }) {
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
+  
   const [itemOffset, setItemOffset] = useState(0);
 
   // Simulate fetching items from another resources.
