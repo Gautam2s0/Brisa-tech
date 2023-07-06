@@ -22,7 +22,6 @@ function Items({ currentItems }) {
 function PaginatedItems({ itemsPerPage }) {
   
   const [itemOffset, setItemOffset] = useState(0);
-
   // Simulate fetching items from another resources.
   // (This could be items from props; or items loaded in a local state
   // from an API endpoint with useEffect and useState)
