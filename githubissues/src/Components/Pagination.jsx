@@ -3,11 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
 import style from "./Styles/Pagination.css"
 
-// export const Pagination = () => {
-//   return (
-//     <div>Pagination</div>
-//   )
-// }
+
 const items = new Array(500).fill(0).map((el,i)=>el+i+1)
 
 function Items({ currentItems }) {
