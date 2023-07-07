@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PaginatedItems from './Pagination'
 import { ListCard } from './ListCard'
 import axios from "axios"
+import { Spinner } from './Spinner'
 // import BASE_URL from "./"
 
 export const IssueList = () => {
@@ -15,7 +16,9 @@ export const IssueList = () => {
       console.log(err)
     })
   },[])
-  
+   if(issues.length==0){
+    return <Spinner/>
+   }
    
   return (
     <div style={{paddingBottom:"5%"}}>

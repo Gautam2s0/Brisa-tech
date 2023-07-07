@@ -40,6 +40,9 @@ export const ListCard = (props) => {
     if (+year === CurrentYear) {
       SetDisplay("none");
     }
+    if(comments==0){
+      setCommentDisplay("none")
+    }
     // getting user info
     axios.get(`${user.url}`).then((res)=>{
         console.log(res.data)
@@ -79,10 +82,11 @@ export const ListCard = (props) => {
                 style={{ textDecoration: "none", marginLeft: ".2%" }}
               >
                 {
-                    userData.name
+                    userData.name?userData.name:user.login.split("[").splice(0,1)
 
                 }
               </a>
+              <span style={{display:user.type=="User"?"none":"flex",padding:"0px 10px",border:"1px solid #333", borderRadius:"50px",marginLeft:"2px" }}>{user.type}</span>
             </span>
           </p>
         </div>
