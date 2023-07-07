@@ -8,7 +8,7 @@ import { Octokit, } from "octokit";
 
 export const IssueList = () => {
   const[issues,setIssues]=useState([])
-  const token = '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';
+  
 //   const octokit = new Octokit({ auth: `personal-access-token123` });
 
 // const response = await octokit.request("GET /orgs/{org}/repos", {
