@@ -11,7 +11,7 @@ This app is a clone of the Github issue page. It has similar functionality and u
 4. React.js
 5. Axios 
 ## deplyed link
-https://githubissues-chi.vercel.app/
+https://githubissues-gautam2s0.vercel.app/
 
 
 
