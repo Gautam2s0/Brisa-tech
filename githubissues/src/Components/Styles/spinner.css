@@ -1,9 +1,10 @@
 #spinner{
-    width: 20px;
-    height: 20px;
+    width: 80px;
+    height: 80px;
     margin: auto;
+    margin-top: 15%;
     border: 2px solid #f3f3f3;
-    border-top: 2px solid #3498db;
+    border-top: 5px solid #3498db;
     border-radius: 50%;
     animation: spin 2s linear infinite ;
    

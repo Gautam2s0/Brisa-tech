@@ -14,18 +14,18 @@ export const ListCard = (props) => {
   let date = new Date();
   const arr = `${updated_at}`.split("-");
   const months = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
   const month_index = parseInt(arr[1], 10) - 1;
   const day = arr[2].split("").splice(0, 2).join("");
@@ -45,7 +45,6 @@ export const ListCard = (props) => {
     }
     // getting user info
     axios.get(`${user.url}`).then((res)=>{
-        console.log(res.data)
         setUserData(res.data)
     })
     .catch((err)=>{
@@ -77,9 +76,9 @@ export const ListCard = (props) => {
               <span style={{ display: display }}>{`${year}`}</span>
               <span>{` by `}</span>
               <a
-                href="" 
+                // href="" 
                 className="anchorTag"
-                style={{ textDecoration: "none", marginLeft: ".2%" }}
+                // style={{ textDecoration: "none", marginLeft: ".2%",cursor:"pointer" }}
               >
                 {
                     userData.name?userData.name:user.login.split("[").splice(0,1)
