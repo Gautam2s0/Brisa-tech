@@ -21,7 +21,7 @@ function Items({ currentItems }) {
 
 function PaginatedItems({issues,setIssues, itemsPerPage }) {
   const pageCount = issues.length||Math.ceil(issues.length / itemsPerPage);
-  const token = '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';
+ 
  
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
