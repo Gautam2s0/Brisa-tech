@@ -8,7 +8,7 @@ This app is clone of the github issue page. It has similar functionality and use
 4. React.js
 5. Axios 
 ## deplyed link
-https://githubissues-chi.vercel.app/
+https://githubissues-gautam2s0.vercel.app/
 
 ### Github Repo link
 

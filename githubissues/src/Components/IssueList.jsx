@@ -8,6 +8,7 @@ import { Octokit, } from "octokit";
 
 export const IssueList = () => {
   const[issues,setIssues]=useState([])
+  const token = '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';
 //   const octokit = new Octokit({ auth: `personal-access-token123` });
 
 // const response = await octokit.request("GET /orgs/{org}/repos", {
@@ -18,17 +19,18 @@ export const IssueList = () => {
   useEffect(()=>{
     axios({
       method: 'get',
-      url: BASE_URL,
-      
+      url:BASE_URL, 
       headers: {
-        'X-GitHub-Api-Version': '2022-11-28',
-        'Content-Type':"application/json"
-      }
+        'Accept': 'application/vnd.github.v3+json',
+        'Authorization': `token ${token}`
+    }
+      
     }).then((res)=>{
       setIssues(res.data)
     }).catch((err)=>{
       console.log(err)
     });
+
 
     // const octokit = new Octokit({
     //   auth: 'YOUR-TOKEN'

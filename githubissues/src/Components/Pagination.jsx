@@ -21,16 +21,30 @@ function Items({ currentItems }) {
 
 function PaginatedItems({issues,setIssues, itemsPerPage }) {
   const pageCount = issues.length||Math.ceil(issues.length / itemsPerPage);
+  const token = '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';
  
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    axios.get(`${BASE_URL}?page=${event.selected+1}`).then((res)=>{
-      setIssues(res.data)
-    }).catch((err)=>{
-      console.log(err) 
-    })
-  };
-  
+  //   axios.get(`${BASE_URL}?page=${event.selected+1}`).then((res)=>{
+  //     setIssues(res.data)
+  //   }).catch((err)=>{
+  //     console.log(err) 
+  //   })
+  // };
+  axios({
+    method: 'get',
+    url:`${BASE_URL}?page=${event.selected+1}`, 
+    headers: {
+      'Accept': 'application/vnd.github.v3+json',
+      'Authorization': `token ${token}`
+  }
+    
+  }).then((res)=>{
+    setIssues(res.data)
+  }).catch((err)=>{
+    console.log(err)
+  });
+}
 
   return (
     <>
