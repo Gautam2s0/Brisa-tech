@@ -1,48 +1,45 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
 import style from "./Styles/Pagination.css"
+import axios from 'axios';
+import { ListCard } from './ListCard';
 
-
-const items = new Array(500).fill(0).map((el,i)=>el+i+1)
 
 function Items({ currentItems }) {
   return (
-    <>
+    <div> 
       {currentItems &&
-        currentItems.map((item) => (
+        currentItems.map((item,i) => (
           <div>
-            <h3 style={{color:"red"}}>Item #{item}</h3>
+            <ListCard key={item.id} {...item} i={i} />
           </div>
         ))}
-    </>
+    </div>
   );
 }
 
-function PaginatedItems({ itemsPerPage }) {
-   // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
-  const [itemOffset, setItemOffset] = useState(0);
-  // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
-  const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = items.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(items.length / itemsPerPage);
-
+function PaginatedItems({issues,setIssues, itemsPerPage }) {
+  const pageCount = issues.length||Math.ceil(issues.length / itemsPerPage);
+ 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset} ${event.selected}`
-    );
-    setItemOffset(newOffset);
+    axios.get(`https://api.github.com/repos/octocat/Hello-World/issues?page=${event.selected+1}`).then((res)=>{
+      setIssues(res.data)
+      console.log(event.selected+1)
+      console.log()
+    }).catch((err)=>{
+      console.log(err) 
+    })
   };
+  
+    
+  
+  // console.log(data)
 
   return (
     <>
-      <Items currentItems={currentItems} />
+      <Items currentItems={issues} /> 
       <ReactPaginate 
         pageLinkClassName="pageLinkClassName"
         activeClassName="active"
