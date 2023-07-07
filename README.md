@@ -13,7 +13,7 @@ This app is clone of the github issue page. It has similar functionality and use
 ## deplyed link
 https://githubissues-chi.vercel.app/
 
-### Github Repo link
+
 
 # Getting Started with Create React App
 In the project directory, you can run:
