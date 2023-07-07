@@ -2,7 +2,7 @@
 
 
 ### Introduction 
-This app is clone of the github issue page. It has similar functionality and user interface (UI) as like github issue page. In  this app design is mostly similar. 
+This app is a clone of the Github issue page. It has similar functionality and user interface (UI) as the Github issue page. In  this app, the design is mostly similar to Github issue page. The app has a loading indicator when data is fetching from the server. The loading indicator will be shown in the UI.
 
 ### Tech Stack
 1. Html
