@@ -54,6 +54,10 @@ export const ListCard = (props) => {
 
   return (
     <div className="issue-Card">
+      <div className="Model card">
+      
+      </div>
+      {/* flex tag */}
       <div
         className="issue-card-inner-div"
         style={{
