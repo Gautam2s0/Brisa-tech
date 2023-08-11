@@ -4,7 +4,8 @@ import { IssueList } from './Components/IssueList';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"
+    // appending issue list
       <IssueList/>
     </div>
   
