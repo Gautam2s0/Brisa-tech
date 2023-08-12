@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App"
     // appending issue list
+    
       <IssueList/>
     </div>
   
