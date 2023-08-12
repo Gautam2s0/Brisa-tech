@@ -9,6 +9,7 @@ function App() {
     
       <IssueList/>
     </div>
+
   
   );
 }
