@@ -19,7 +19,7 @@ https://kofluence-8772.vercel.app/profile
   <li>Signup</li>
   <li>Login</li>
   <li>Log out</li>
-  <li>User Profile Pages</li>
+  <li> Authentication </li>
 </ul>
 
 ## screenshots of the Project
