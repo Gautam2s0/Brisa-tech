@@ -17,6 +17,7 @@
 <ul>
   <li>Signup</li>
   <li>Login</li>
+  <li>Log out</li>
   <li>User Profile Pages</li>
 </ul>
 
