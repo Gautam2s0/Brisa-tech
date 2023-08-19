@@ -1,0 +1,141 @@
+/* Profile.css */
+.card{
+ width:  100vw;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  padding-bottom: 5%;
+  
+ 
+}
+
+.profile-card {
+  max-width: 50%;
+  margin:0 auto;
+  margin-top: 5%;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  background-color: darkslateblue;
+  
+  
+}
+
+.profile-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+ 
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #e7f305;
+}
+.profile-details{
+  width: 50%;
+  margin:auto ;
+  text-align: start;
+  letter-spacing: 1.5px;
+  color:aqua;
+  
+}
+
+.profile-details p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+.profile-details  p strong {
+  color: #FF00FF   ;
+  font-style:oblique;
+}
+
+.logout_button {
+ display: flex;
+ justify-content: end;
+ align-items: center;
+  
+}
+
+.logout_btn {
+ max-width: 100%;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  
+  
+ 
+}
+
+.logout_btn:hover {
+  background-color: #c0392b;
+}
+
+
+
+/* meadia query */
+
+@media (max-width: 576px) {
+  .profile-card {
+    max-width: 95%;
+  }
+  .profile-header {
+   flex-wrap: wrap;
+   
+  }
+
+  .profile-details {
+    width: 95%;
+  }
+}
+
+/* Small Devices (Tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .profile-card {
+    max-width: 85%;
+  }
+
+  .profile-details {
+    width: 85%;
+  }
+}
+
+/* Medium Devices (Laptops) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .profile-card {
+    max-width: 70%;
+  }
+
+  .profile-details {
+    width: 70%;
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 993px) {
+  .profile-card {
+    max-width: 50%;
+  }
+
+  .profile-details {
+    width: 70%;
+  }
+}
