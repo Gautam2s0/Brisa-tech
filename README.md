@@ -17,7 +17,6 @@ https://ainak-five.vercel.app/
 <ul>
   <li>Signup</li>
   <li>Login</li>
-    <li>Sorting</li>
   <li>User Profile Pages</li>
 </ul>
 
