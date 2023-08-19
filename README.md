@@ -1,6 +1,6 @@
 **To see the live site click the below link.**
 
-https://kofluence-8772.vercel.app/profile
+https://kofluence-8772-gautam2s0.vercel.app/
 
 ## Built with
 
